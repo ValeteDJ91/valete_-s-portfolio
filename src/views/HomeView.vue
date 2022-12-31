@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Presentation from '../components/Presentation.vue'
+import Showcase from '../components/Showcase.vue'
 </script>
 
 <template>
@@ -12,12 +13,15 @@ import Presentation from '../components/Presentation.vue'
       <RouterLink to="/about">About</RouterLink>
     </nav>
   </div>
+  <Showcase ProjectName="showcase1"/>
+  <Showcase ProjectName="showcase1"/>
+  <Showcase ProjectName="showcase1"/>
 </template>
 
 <style>
 nav {
   width: 100%;
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-align: center;
 }
 

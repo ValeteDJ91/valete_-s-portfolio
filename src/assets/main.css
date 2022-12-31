@@ -10,11 +10,12 @@
 a {
   text-decoration: none;
   transition: 0.4s;
+  color: var(--vt-c-purple-ligth);
 }
 
 @media (hover: hover) {
   a:hover {
-    background-color: hsla(207, 100%, 43%, 0.2);
+    background-color: var(--vt-c-purple-background);
   }
 }
 

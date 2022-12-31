@@ -2,8 +2,8 @@
 </script>
 
 <template>
-  <div class="header_text">
-    <div class="header_background">
+  <div class="header">
+    <div class="header-background">
       <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
       <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
       <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
@@ -43,23 +43,33 @@
       <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
       <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
     </div>
-    <h1>Welcome to</h1>
-    <h1>Valentin Perier--Picard's portfolio</h1>
+    <div class="header-text">
+      <h1>Valentin Perier--Picard</h1>
+      <h3>Developper | Sysadmin</h3>
+    </div>
   </div>
 </template>
 
 <style>
-.header_text {
+.header {
   text-align: center;
   height: 50vh;
 }
-.header_text > h1 {
+.header-text {
   color: white;
-  top: 40%;
-  transform: translateY(-100%);
-  font-size: 2.5rem;
+  top: 50%;
+  transform: translateY(-60%);
 }
-.header_background {
+.header-text > h1 {
+  font-size: 4.8rem;
+  line-height: 85px;
+  text-shadow: 0 0 20px #fff;
+}
+.header-text > h3 {
+  font-size: 1.4rem;
+  text-shadow: 0 0 20px #fff;
+}
+.header-background {
   position: absolute;
   z-index: -2;
   width: 100%;
@@ -75,10 +85,10 @@
   animation: gradient 16s linear infinite;
   animation-direction: alternate;
 }
-.header_background > i {
+.header-background > i {
   position: relative;
-  max-width: 64px;
-  max-height: 64px;
+  max-width: 70px;
+  max-height: 70px;
   min-width: 60px;
   min-height: 60px;
   background-color: var(--vt-c-black-soft);

@@ -13,9 +13,8 @@
 <style>
 nav {
   width: 100%;
-  font-size: 12px;
+  font-size: 1.5rem;
   text-align: center;
-  margin-top: 2rem;
 }
 
 nav a.router-link-exact-active {
