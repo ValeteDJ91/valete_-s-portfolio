@@ -1,17 +1,10 @@
 <script setup lang="ts">
-import Presentation from '../components/Presentation.vue'
-import Showcase from '../components/Showcase.vue'
-
-const ProjectList = [
-  {name:"Showcase1",description:"Showcase1 description"}, 
-  {name:"Showcase2",description:"Showcase2 description"}, 
-  {name:"Showcase3",description:"Showcase3 description"}
-]
+import ProjectPresentation from '../components/ProjectPresentation.vue'
 </script>
 
 <template>
   <header>
-    <Presentation />
+    <ProjectPresentation />
     <div class="wrapper">
       <nav>
         <RouterLink to="/">Home</RouterLink>
@@ -19,7 +12,7 @@ const ProjectList = [
       </nav>
     </div>
   </header>
-  <Showcase v-for="project in ProjectList" :ProjectName="project.name"/>
+  <h1>{{ $route.params.project }}</h1>
 </template>
 
 <style>

@@ -45,7 +45,7 @@
     </div>
     <div class="header-text">
       <h1>Valentin Perier--Picard</h1>
-      <h3>Developper | Sysadmin</h3>
+      <h3>Developer | Sysadmin</h3>
     </div>
   </div>
 </template>

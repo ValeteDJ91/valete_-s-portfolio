@@ -5,6 +5,12 @@ defineProps({
     required: false
   }
 })
+
+const ProjectList = [
+  {name:"Showcase1",description:"Showcase1 description"}, 
+  {name:"Showcase2",description:"Showcase2 description"}, 
+  {name:"Showcase3",description:"Showcase3 description"}
+]
 </script>
 
 <template>
@@ -12,6 +18,8 @@ defineProps({
     <img :src="`src/assets/images/showcase/${ProjectName}.png`" class="image-showcase"/>
     <div class="showcase-info">
       <h1>{{ ProjectName }}</h1>
+      <p>{{ ProjectList.find(element => element.name == ProjectName)?.description }}</p>
+      <RouterLink :to="`/project/${ProjectName}`">{{ ProjectName }}</RouterLink>
     </div>
   </div>
 </template>
@@ -71,5 +79,15 @@ defineProps({
     radial-gradient(168.24px at calc(100% + 148.00px) 50%,#0000 99%,#000 101%) calc(100% - 80px) 50%/100% 320px repeat-y;
   -webkit-mask: var(--mask);
           mask: var(--mask);
+}
+.showcase-info > h1 {
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+  color: white;
+}
+.showcase-info > p {
+  font-size: 0.8rem;
+  color: white;
+  padding-left: 10px;
 }
 </style>
