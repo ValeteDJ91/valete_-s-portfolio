@@ -7,10 +7,10 @@ const ProjectList = [
 </script>
 
 <template>
-  <div class="header">
-    <div class="header-background" :style="`background-image:url(../src/assets/images/showcase/${$route.params.project}.png)`">
+  <div class="project-header">
+    <div class="project-header-background" :style="`background-image:url(../src/assets/images/showcase/${$route.params.project}.png)`">
     </div>
-    <div class="header-text">
+    <div class="project-header-text">
       <h1>{{ $route.params.project }}</h1>
       <h3>{{ ProjectList.find(element => element.name == $route.params.project)?.description }}</h3>
     </div>
@@ -18,25 +18,25 @@ const ProjectList = [
 </template>
 
 <style>
-.header {
+.project-header {
   text-align: center;
   height: 50vh;
 }
-.header-text {
+.project-header-text {
   color: white;
   top: 50%;
   transform: translateY(-50%);
 }
-.header-text > h1 {
+.project-header-text > h1 {
   font-size: 4.8rem;
   line-height: 85px;
   text-shadow: 0 0 20px #fff;
 }
-.header-text > h3 {
+.project-header-text > h3 {
   font-size: 1.4rem;
   text-shadow: 0 0 20px #fff;
 }
-.header-background {
+.project-header-background {
   position: absolute;
   z-index: -2;
   width: 100%;

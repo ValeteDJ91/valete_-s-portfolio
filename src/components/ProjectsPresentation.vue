@@ -4,11 +4,10 @@
 <template>
   <div class="main-header">
     <div class="main-header-background">
-      <i v-for="index in 500"></i>
+      <i v-for="index in 300"></i>
     </div>
     <div class="main-header-text">
-      <h1>Valentin Perier--Picard</h1>
-      <h3>Developer | Sysadmin</h3>
+      <h1>All my projects</h1>
     </div>
   </div>
 </template>
@@ -16,7 +15,7 @@
 <style>
 .main-header {
   text-align: center;
-  height: 50vh;
+  height: 30vh;
 }
 .main-header-text {
   color: white;
@@ -26,10 +25,6 @@
 .main-header-text > h1 {
   font-size: 4.8rem;
   line-height: 85px;
-  text-shadow: 0 0 20px #fff;
-}
-.main-header-text > h3 {
-  font-size: 1.4rem;
   text-shadow: 0 0 20px #fff;
 }
 .main-header-background {

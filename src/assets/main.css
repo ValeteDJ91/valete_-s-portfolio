@@ -7,14 +7,14 @@
   font-weight: normal;
 }
 
-a {
+nav > a {
   text-decoration: none;
   transition: 0.4s;
   color: var(--vt-c-purple-ligth);
 }
 
 @media (hover: hover) {
-  a:hover {
+  nav > a:hover {
     background-color: var(--vt-c-purple-background);
   }
 }
