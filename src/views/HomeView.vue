@@ -1,13 +1,7 @@
 <script setup lang="ts">
-import Presentation from '../components/Presentation.vue'
-import Navigation from '../components/Navigation.vue'
-import Showcase from '../components/Showcase.vue'
-
-const ProjectList = [
-  {name:"Showcase1",description:"Showcase1 description"}, 
-  {name:"Showcase2",description:"Showcase2 description"}, 
-  {name:"Showcase3",description:"Showcase3 description"}
-]
+import Presentation from '../components/HomeHeader.vue'
+import Navigation from '../components/BaseNavigation.vue'
+import Showcase from '../components/HomeProjectsShowcase.vue'
 </script>
 
 <template>
@@ -19,7 +13,7 @@ const ProjectList = [
     <a>About me</a>
   </div>
   <div class="me">
-    <img :src="`src/assets/images/me/${Math.floor(Math.random() * 3 + 1)}.png`" class="Personal-Image">
+    <img :src="`http://localhost:3000/images/me/${Math.floor(Math.random() * 3 + 1)}.png`" class="Personal-Image">
     <div class="Personal-Info">
       <h1>👋 Hi, I'm Valentin Perier--Picard</h1>
       <p>a 18 year old system admin and developer</p>
@@ -29,7 +23,7 @@ const ProjectList = [
   <div class="category-title">
     <a>My main projects</a>
   </div>
-  <Showcase v-for="project in ProjectList" :ProjectName="project.name"/>
+  <Showcase/>
 </template>
 
 <style>

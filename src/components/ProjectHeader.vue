@@ -1,18 +1,24 @@
 <script setup lang="ts">
-const ProjectList = [
-  {name:"Showcase1",description:"Showcase1 description"}, 
-  {name:"Showcase2",description:"Showcase2 description"}, 
-  {name:"Showcase3",description:"Showcase3 description"}
-]
+import {useRoute} from "vue-router";
+const route = useRoute();
+const id = route.params.id;
+
+defineProps({
+  projectInfo: {
+    type: String,
+    required: true
+  }
+})
+
 </script>
 
 <template>
   <div class="project-header">
-    <div class="project-header-background" :style="`background-image:url(../src/assets/images/showcase/${$route.params.project}.png)`">
+    <div class="project-header-background" :style="`background-image:url(http://localhost:3000/images/showcase/${$route.params.project}.png)`">
     </div>
     <div class="project-header-text">
-      <h1>{{ $route.params.project }}</h1>
-      <h3>{{ ProjectList.find(element => element.name == $route.params.project)?.description }}</h3>
+      <h1>{{ projectInfo?.name }}</h1>
+      <h3>{{ projectInfo?.description }}</h3>
     </div>
   </div>
 </template>
@@ -20,7 +26,7 @@ const ProjectList = [
 <style>
 .project-header {
   text-align: center;
-  height: 50vh;
+  height: 40vh;
 }
 .project-header-text {
   color: white;

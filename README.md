@@ -8,8 +8,13 @@ will soon be availble at Valete.fr
 ---
 ### Tech
 
+# FrontEnd
 - VueJs
 - VueRouter
+- Font-Awesome
+
+# BackEnd
+- ExpressJS
 
 ---
 #### Project Setup
